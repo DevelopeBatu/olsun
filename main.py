@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'  # Güvenlik amacıyla kullanılacak bir anahtar
 
 # Firebase'e bağlanmak için gerekli yapılandırma
-cred = credentials.Certificate('/Users/muammer/Documents/firebase/serviceAccountKey.json')  # serviceAccountKey.json dosyasının yolu
+cred = credentials.Certificate('./serviceAccountKey.json')  # serviceAccountKey.json dosyasının yolu
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
